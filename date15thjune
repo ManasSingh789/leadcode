@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i,j,k,l,temp=0,n=0,z=0;
+	int arr1[4]={1,2,4,5};
+	int arr2[4]={5,8,7,4};
+	int s[4];
+	for(i=0;i<4;i++)
+	{
+		for(j=0;j<4;j++)
+			{
+				if(arr1[i]==arr2[j])
+				{
+					s[n]=arr1[i];
+					n=n+1;
+					z++;
+				}
+			}
+	}
+	for(k=0;k<z;k++)
+	{
+		for(l=0;l<z;l++)
+		{
+			if(s[k]<s[l])
+			{
+				temp=s[k];
+				s[l]=s[k];
+				s[k]=temp;
+			}
+		}
+	}
+	cout << s[0];
+	return 0;
+}
